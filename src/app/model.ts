@@ -43,13 +43,13 @@ export class Model {
   }
 
 
-  getTodoItemsFRomModel() {
+  getTodoItemsFromModel() {
     return this._items;
   }
 
 }
 
 const model2 = new Model(TodoItem);
-const r = model2.getTodoItemsFRomModel();
+const r = model2.getTodoItemsFromModel();
 
 
