@@ -24,28 +24,32 @@
 //  my way
 
 export class TodoItem {
-  // action: string;
-  // done: boolean;
+
   constructor(private action: string, private done: boolean) {
-    // this.action = action;
-    // this.done = done;
   }
+
 }
 
 
 export class Model {
   user: string;
-  // items: any;
 
-  constructor( public items: any ) {
+  constructor( private _items: any ) {
     this.user = 'Milan';
-    this.items = [
+    this._items = [
       new TodoItem( 'Learn Angular', false),
       new TodoItem('Practice everything wath you learn', true)
     ];
   }
 
+
+  getTodoItemsFRomModel() {
+    return this._items;
+  }
+
 }
 
+const model2 = new Model(TodoItem);
+const r = model2.getTodoItemsFRomModel();
 
 
