@@ -18,7 +18,7 @@ export class AppComponent {
   }
 
   getTodoItems() {
-    return this.model.getTodoItemsFromModel();
+    return this.model.getTodoItemsFromModel;
   }
 
 }
