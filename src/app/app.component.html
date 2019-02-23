@@ -3,10 +3,14 @@
 
 <div class="my-1">
   <input class="form-control" #newItem placeholder="add item on click">
-  <input class="form-control mt-1" placeholder="add item new on enter" #newItemEnter (keyup.enter)="onKeyUp(newItemEnter)">
-  <button class="btn btn-primary mt-1" (click)="addItem(newItem.value)">
+  <button class="btn btn-primary mt-1"
+          (click)="addItem(newItem.value)">
     Add item
   </button>
+  <input class="form-control mt-1"
+         placeholder="add item new on enter"
+         #newItemEnter
+         (keyup.enter)="onKeyUp(newItemEnter.value)">
 </div>
 
 <table class="table table-striped table-bordered">
