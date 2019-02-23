@@ -2,7 +2,8 @@
 <h3 class="bg-primary p-1 text-white">{{ getName() }}'s To Do List</h3>
 
 <div class="my-1">
-  <input class="form-control" #newItem>
+  <input class="form-control" #newItem placeholder="add item on click">
+  <input class="form-control mt-1" placeholder="add item new on enter" #newItemEnter (keyup.enter)="onKeyUp(newItemEnter)">
   <button class="btn btn-primary mt-1" (click)="addItem(newItem.value)">
     Add item
   </button>

@@ -27,6 +27,12 @@ export class AppComponent {
     }
   }
 
+  onKeyUp(item) {
+    console.log(item.value);
+    this.model.getTodoItemsFromModel.push(new TodoItem(item, false));
+    item.value = '';
+  }
+
 }
 
 
