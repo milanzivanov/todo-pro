@@ -21,16 +21,21 @@ export class AppComponent {
     return this.model.getTodoItemsFromModel.filter( (item) => !item.done);
   }
 
-  addItem(newItem) {
+  // tslint:disable-next-line:member-ordering
+  clearInputBtn: string;
+  addItem(newItem: string) {
     if (newItem !== '') {
       this.model.getTodoItemsFromModel.push(new TodoItem(newItem, false));
     }
+    this.clearInputBtn = '';
   }
 
-  onKeyUp(item) {
+  // tslint:disable-next-line:member-ordering
+  clearInputEnter: string;
+  onKeyUp(item: string) {
     console.log(item);
     this.model.getTodoItemsFromModel.push(new TodoItem(item, false));
-    item = '';
+    this.clearInputEnter = '';
   }
 
 }
