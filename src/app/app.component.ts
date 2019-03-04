@@ -11,7 +11,7 @@ export class AppComponent {
   // model = new Model();
 
   // MY WAY
-  model = new Model(TodoItem);
+  model = new Model();
 
   getName() {
     return this.model.user;
@@ -36,6 +36,16 @@ export class AppComponent {
     console.log(item);
     this.model.getTodoItemsFromModel.push(new TodoItem(item, false));
     this.clearInputEnter = '';
+  }
+
+
+  // delite item
+  deliteItem(item: TodoItem) {
+    console.log(item);
+
+    const index = this.model.getTodoItemsFromModel.findIndex(p => p === item);
+    this.model.getTodoItemsFromModel.splice(index, 1);
+
   }
 
 }

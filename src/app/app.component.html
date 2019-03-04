@@ -35,6 +35,11 @@
         <span *ngSwitchCase="true">Yep</span>
         <span *ngSwitchDefault>Noup</span>
       </td>
+      <td>
+        <button class="btn btn-danger" (click)="deliteItem(item)">
+          X
+        </button>
+      </td>
     </tr>
   </tbody>
 </table>

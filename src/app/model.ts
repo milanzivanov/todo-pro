@@ -23,13 +23,14 @@
 
 //  my way
 export class TodoItem {
-  constructor(private action: string, private done: boolean) {
+  constructor(public action: string, public done: boolean) {
   }
 }
 
 export class Model {
   user: string;
-  constructor( private _items: any ) {
+  private _items: TodoItem[];
+  constructor() {
     this.user = 'Milan';
     this._items = [
       new TodoItem( 'Learn Angular in progress', false),
