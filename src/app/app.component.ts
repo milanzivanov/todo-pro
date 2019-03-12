@@ -41,10 +41,11 @@ export class AppComponent {
 
   // delite item
   deliteItem(item: TodoItem) {
-    console.log(item);
+    // console.log(typeof(item));
 
     const index = this.model.getTodoItemsFromModel.findIndex(p => p === item);
     this.model.getTodoItemsFromModel.splice(index, 1);
+    console.log('index:', index);
 
   }
 
